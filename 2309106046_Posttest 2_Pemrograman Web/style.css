@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body{
+    background-color: #e7e5e4;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+header{
+    width: 100%;
+    margin-top: 2.25rem;
+    margin-bottom: 2.5rem;
+}
+
+header img{
+    position: relative;
+    left: 30%;
+    width: 40%;
+    border-radius: 24px;
+}
+
+.content{
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-order{
+    display: flex;
+    flex-direction: column;
+}
+.card-detail-order{
+    width: 100%;
+    padding: 1rem;
+    background-color: #93c5fd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 20%)
+}
+
+.card-detail-order h2{
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.card-detail-order .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-detail-order .item .item-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+.item-content img{
+    border-radius: 16px;
+}
+
+.item-content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.item-content h5{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #475569;
+}
+
+.item input[type="number"]{
+    width: 3rem;
+    height: 2.25rem;
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 2px solid #0369a1;
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.garis{
+    border-top: 1px solid #475569;
+    margin: 0.5rem 0;
+}
+
+.total-medium{
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 300;
+    justify-content: space-between;
+    color: #1e293b;
+}
+
+.total-bold{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.metode-pembayaran{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.garis-bold{
+    border-top: 5px solid #475569;
+    margin: 0.75rem 0;
+}
+
+.metode-pembayaran h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.items-metode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.item-metode label {
+    font-size: 1rem; /* Ukuran font teks */
+}
+
+
+.card-detail-informasi{
+    width: 100%;
+    padding: 1rem;
+    background-color: #93c5fd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 20%)
+}
+
+.card-detail-informasi h2{
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.card-detail-informasi .informasi{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 22.4px;
+    font-weight: 300;
+}
+
+.informasi input[type="date"]{
+    border-radius: 8px;
+    padding: 0.5rem;
+    border: 2px solid #0369a1;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.informasi input[type="date"]:hover{
+    background-color:#0369a1 ;
+    color: #fafafa;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+footer{
+    margin-top: 2.5rem;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid #1e293b;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+footer button{
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid #0369a1;
+}
+
+footer button:hover{
+    background-color: #0369a1;
+    color: #fafafa;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@media (min-width: 768px) {
+    .content{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-detail-order{
+        width: 60%;
+    }
+
+    .item-content h4{
+    font-size: 1.25rem;
+    }
+
+    .item-content h5{
+        font-size: 1rem;
+    }
+
+    .item input[type="number"]{
+        width: 5rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .total-medium{
+        font-size:1rem;
+    }
+    
+
+    .card-detail-informasi{
+        width: 50%;
+        height: fit-content;
+    }
+    
+    .card-detail-informasi .informasi{
+        font-size: 1.1rem;
+    }
+    
+    .informasi input[type="date"]{
+        font-size: 1rem;
+    }
+    }
+
+@media (min-width: 1024px) {
+    .card-detail-order{
+        width: 40%;
+    }
+
+    .card-detail-order h2{
+        font-size: 1.5rem;
+    }
+
+    .item-content h4{
+    font-size: 1.5rem;
+    }
+
+    .item-content h5{
+        font-size: 1.25rem;
+    }
+
+    .item input[type="number"]{
+        width: 6rem;
+        height: 4rem;
+        font-size: 1.25rem;
+    }
+
+    .total-medium{
+        font-size:1.25rem;
+    }
+
+    .total-bold{
+        font-size: 1.5rem;
+    }
+    
+
+    .card-detail-informasi{
+        width: 40%;
+    }
+    
+    .card-detail-informasi h2{
+        font-size: 1.5rem;
+    }
+
+    .card-detail-informasi .informasi{
+        font-size: 1.25rem;
+    }
+    
+    .informasi input[type="date"]{
+        font-size: 1.1rem;
+    }
+
+    .item-metode label {
+        font-size: 1.25rem; /* Ukuran font teks */
+    }
+
+    footer{
+        font-size: 1.5rem;
+    }
+    
+    footer button{
+        width: 8rem;
+    }
+}
+
