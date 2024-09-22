@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Patrick+Hand&family=Playpen+Sans:wght@100..800&display=swap');
+:root {
+    --body-background: #FAFAFA;
+    --body-color: #030303;
+    --sidebar-color: #CBD5E1;
+    --buttonCTA-color: #0284c7;
+    --card-color: #FAFAFA;
+    --textslate-color: #475569;
+    --shadow-color: rgba(0, 0, 0, 20%);
+    --footer-color: rgb(2 132 199);
+  }
+  .dark {
+    --body-background: #030303;
+    --body-color: #FAFAFA;
+    --sidebar-color: #334155;
+    --buttonCTA-color: #0369a1;
+    --card-color: #1e293b;
+    --textslate-color: ##f1f5f9;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --footer-color: #172554;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.3s;
+}
+
+a:visited{
+    color: var(--body-color);
+}
+a:active{
+    color: var(--body-color);
+}
+a{
+    color: var(--body-color); 
+}
+
+a:checked{
+    color: var(--body-color); 
+}
+
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--body-background);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: var(--body-color);
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.25rem;
+    align-items: center;
+    margin-bottom: 5rem;
+
+}
+
+header .logo{
+    font-family: "Nerko One", cursive;
+    font-size: 2rem;
+}
+.hamburger-menu{
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.strip{
+    width: 100%;
+    height: 0.25rem;
+    margin-bottom: 0.25rem;
+    background-color: var(--body-color);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 40%;
+    height: 100%;
+    background-color: var(--sidebar-color);
+    transition: all 0.7s ease;
+    z-index: 1000;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+header .sidebar.active{
+    right: 0;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    align-items: flex-start;
+}
+
+header nav  button{
+    border: none;
+    background-color: transparent;
+    display: inline;
+
+}
+
+header nav img{
+    width: 2rem;
+    display: inline;
+}
+
+header nav ul li a:hover{
+    color: var(--buttonCTA-color);
+}
+
+
+main{
+    width: 100%;
+    padding: 2.25rem;
+}
+
+main .heading-content{
+    font-size: 0.875rem;
+    line-height: 1.313rem;
+}
+
+main .content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 5rem;
+}
+
+main .heading-content span{
+    color: var(--buttonCTA-color);
+}
+
+main p{
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+main .cta{
+    width: fit-content;
+    padding: 0.75rem;
+    background-color: var(--buttonCTA-color);
+    color: var(--body-background);
+    border-radius: 16px;
+    border: none;
+}
+
+main .cta:hover{
+    background-color: var(--body-background);
+    border: 1px solid var(--buttonCTA-color);
+    color: var(--body-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.product{
+    width: 100%;
+    padding: 2.25rem;
+    margin-bottom: 5rem;
+}
+
+.product h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.product .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product .card{
+    padding: 1rem;
+    width: 50%;
+    background-color: var(--card-color);
+    box-shadow: 0 16px 40px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    gap: 0.25rem;
+    border: none;
+}
+
+.product .card:hover{
+    border: 1px solid var(--buttonCTA-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.product .card img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.product .card h4{
+    font-size: 1rem;
+}
+
+.product .card h5{
+    font-size: 0.75rem;
+    color: var(--textslate-color);
+    font-weight:300;
+}
+
+.product .card h6{
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 0.75rem;
+}
+
+.product .card button{
+    width: 4.75rem;
+    font-size: 0.5rem;
+    padding: 0.25rem;
+    border: 1px solid var(--buttonCTA-color);
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+.product .card button:hover{
+    background-color: var(--buttonCTA-color);
+    color: var(--body-color);
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.product .btn-show{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.product .btn-show a:hover{
+    color: var(--buttonCTA-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--footer-color);
+    padding: 1.75rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+
+/* tablet */
+@media (min-width: 768px) {
+
+    header .logo{
+        font-size: 2.5rem;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    .sidebar{
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        right: 0;
+        background-color: var(--body-background);
+        padding: 0;
+        justify-content: space-between;
+
+    }
+
+    header nav ul{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2.25rem;
+    }
+
+    main .content{
+        width: 55%;
+    }
+
+    main .heading-content{
+        font-size: 1.25rem;
+        line-height: 1.875rem
+    }
+
+    main .content p{
+        font-size: 0.75rem;
+        line-height: 1.2rem;
+    }
+
+    header nav ul img{
+        width: 2rem;
+    }
+
+    .product .items{
+        flex-direction: row;
+    }
+
+}
+
+/* laptop dan destkop */
+
+@media (min-width: 1024px){
+    header .logo{
+        font-size: 3rem;
+    }
+
+    header nav ul{
+        font-size: 1.5rem;
+    }
+
+    main .content{
+        width: 55%;
+    }
+
+    main .heading-content{
+        font-size: 2rem;
+        line-height: 3.2rem
+    }
+
+    main .content p{
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
+    main .content .cta{
+        font-size: 1.5rem;
+        border-radius: 36px;
+        padding: 1.25rem;
+    }
+
+
+    .product h2{
+        font-size: 3rem;
+    }
+
+    .product .items{
+        justify-content: space-between;
+    }
+    .product .items .card{
+        width: 20%;
+    }
+
+    .product .card h4{
+        font-size: 1.5rem;
+    }
+    
+    .product .card h5{
+        font-size: 1.25rem;
+        color: var(--textslate-color);
+        font-weight:300;
+    }
+    
+    .product .card h6{
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+    }
+    
+    .product .card button{
+        width: 5.75rem;
+        font-size: 1rem;
+    }
+
+    .product .btn-show{
+        font-size: 1.5rem;
+    }
+
+    footer{
+        font-size: 0.75rem;
+    }
+
+}
