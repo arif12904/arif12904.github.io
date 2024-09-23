@@ -63,7 +63,9 @@ header{
     padding: 2.25rem;
     align-items: center;
     margin-bottom: 5rem;
-
+    background-color: var(--body-background);
+    position: fixed;
+    top: 0;
 }
 
 header .logo{
@@ -127,6 +129,11 @@ header nav img{
 
 header nav ul li a:hover{
     color: var(--buttonCTA-color);
+    cursor: pointer;
+}
+
+header nav  button:hover{
+    cursor: pointer;
 }
 
 
@@ -360,7 +367,7 @@ footer{
         justify-content: space-between;
     }
     .product .items .card{
-        width: 50%;
+        width: 25%;
     }
 
     .product .card h4{
